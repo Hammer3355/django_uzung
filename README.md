@@ -3,13 +3,28 @@
 
 **Установка стабильной версии Django** 
 командой:
-pip install django==4.2
+--pip install django==4.2
 
 **Проверка установки** 
 командой:
-pip freeze
+--pip freeze
 
 **Создание нового проекта** 
 командой:
-django-admin startproject anki .
+--django-admin startproject anki .
 (точка в конце команды позволяет создать проект без подкаталога)
+
+**Создание новой ветки в Git.**
+--Ветка -Develop-
+
+Проверка сервера на работоспособность
+комндой:
+--python manage.py runserver
+
+**Остановка сервера.** 
+Горячие клавиши:
+--CTRL + C
+
+**Создал приложение**
+командой:
+--python .\manage.py startapp cards
