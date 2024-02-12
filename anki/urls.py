@@ -21,5 +21,5 @@ from cards import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('catalog/', include('cards.urls')),
+    path('cards/', include('cards.urls')),
 ]

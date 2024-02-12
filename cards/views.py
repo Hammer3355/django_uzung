@@ -7,3 +7,6 @@ def index(request):
 
 def catalog(request):
     return HttpResponse("<h1>Каталог карточек</h1>")
+
+def get_card_by_id(request, card_id):
+    return HttpResponse(f"<h1>Карточка по ID: {card_id}</h1>")
