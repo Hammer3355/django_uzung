@@ -1,6 +1,7 @@
 # /cards/urls.py
 from django.urls import path
 from . import views
+
 # Префикс /cards/
 urlpatterns = [
     path('catalog/', views.catalog, name='catalog'),  # Общий каталог всех карточек
@@ -10,4 +11,3 @@ urlpatterns = [
     path('<int:card_id>/detail/', views.get_detail_card_by_id, name='detail_card_by_id'),
     # Детальная информация по карточке
 ]
-
