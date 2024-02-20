@@ -18,20 +18,22 @@ render(запрос, шаблон, контекст=None)
     Если контекст не передан, используется пустой словарь.
 """
 
-about_info = {
+info = {
     'users_count': 100500,
-    'cards_count': 200600
+    'cards_count': 200600,
+    'my_l_cards_count': 28,
+    'menu':['Главная', 'О проекте', 'Каталог'],
 }
 
 def index(request):
     """
     Возвращает рендер шаблона templates/cards/main.html
     """
-    return render(request, 'cards/main.html')
+    return render(request, 'cards/main.html', context=info)
 
 
 def about(request):
-    return render(request, 'cards/about.html', context=about_info)
+    return render(request, 'cards/about.html', context=info)
 
 
 def catalog(request):
