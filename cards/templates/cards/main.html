@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Первый шаблон</title>
+    <style>
+        .green{
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    <h1>Первый шаблон</h1>
-    <p>Содержимое главной страницы</p>
+<nav>
+    <ul>
+    {% for title in menu %}
+        <li {% if forloop.first %}
+            class="green"
+            {% endif %}>
+            {{ title }}
+        </li>
+        {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+    </ul>
+</nav>
+    <h1>Главная страница</h1>
+    <p>Содержимое страницы</p>
 </body>
 </html>

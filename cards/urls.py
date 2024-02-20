@@ -10,7 +10,3 @@ urlpatterns = [
     path('/<int:card_id>/detail', views.get_detail_card_by_id, name='detail_card_by_id'),  # Детальная информация по карточке
 ]
 
-
-
-
-
