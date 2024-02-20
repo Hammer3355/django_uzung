@@ -1,10 +1,19 @@
 <!DOCTYPE html>
+<!-- Базовый шаблон root/templates/base.html -->
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ page_title }}</title>
+<!-- Подключим из статики app cards/static/css/main.css -->
+    <link rel="stylesheet" href="{% static 'cards/css/main.css' %}">
+
 </head>
 <body>
-
+<nav>
+{% include "include/nav_menu.html" %}
+</nav>
+{% block content %}
+{% endblock %}
 </body>
 </html>
