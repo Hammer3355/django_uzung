@@ -18,6 +18,10 @@ render(запрос, шаблон, контекст=None)
     Если контекст не передан, используется пустой словарь.
 """
 
+about_info = {
+    'users_count': 100500,
+    'cards_count': 200600
+}
 
 def index(request):
     """
@@ -27,7 +31,7 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'cards/about.html')
+    return render(request, 'cards/about.html', context=about_info)
 
 
 def catalog(request):
