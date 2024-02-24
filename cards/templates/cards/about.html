@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>О проекте</title>
-</head>
-<body>
-    <h1>Проект интервального повторения</h1>
-    <hr>
-
+<!--card/templates/card/about.html-->
+{% extends "base.html" %}
+{% block content %}
+<!--Шаблон about-->
+<h1>Проект интервального повторения</h1>
 <p>Проект интервального повторения - это проект,
     который помогает запоминать информацию с помощью интервального повторения.</p>
-<p>Пользователей в проекте: {{ users_count }}</p>
-<p>Карточек в проекте: {{ cards_count }}</p>
-    <p>Лично моих любимых карточек: {{ my_l_cards_count }}</p>
-<hr>
-</body>
-</html>
+
+<p>Пользователей в проекте: {{users_count}}</p>
+<p>Карточек в проекте: {{cards_count}}</p>
+{% endblock %}

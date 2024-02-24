@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Первый шаблон</title>
-    <style>
-        .green{
-            color: green;
-        }
-    </style>
-</head>
-<body>
-<nav>
-    <ul>
-    {% for title in menu %}
-        <li {% if forloop.first %}
-            class="green"
-            {% endif %}>
-            {{ title }}
-        </li>
-        {% if not forloop.last %}<hr>{% endif %}
-    {% endfor %}
-    </ul>
-</nav>
-    <h1>Главная страница</h1>
-    <p>Содержимое страницы</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<h1>Главная при главная страница</h1>
+{% endblock %}
